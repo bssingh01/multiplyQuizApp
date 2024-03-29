@@ -41,8 +41,6 @@ function updateLocalStorage(value) {
   localStorage.setItem("highScore", JSON.stringify(value));
 }
 
-highScore.innerText = parseInt(localStorage.getItem("highScore"));
-
 function updateScorecard() {
   checkAns();
   score.innerText = scoreVal;
@@ -94,6 +92,12 @@ startBtn.addEventListener("click", () => {
   container.classList.toggle("hidden");
   container.classList.toggle("visibleContainer");
   starter.style.display = "none";
+  if (!parseInt(localStorage.getItem("highScore"))) {
+    updateLocalStorage(0);
+    highScore.innerText = 0;
+  } else {
+    highScore.innerText = parseInt(localStorage.getItem("highScore"));
+  }
   updateQuestion();
   play();
 });
