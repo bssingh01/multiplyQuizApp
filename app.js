@@ -13,7 +13,7 @@ let timeLoader = document.querySelector(".timeLoader");
 let starter = document.querySelector(".starter");
 let startBtn = document.querySelector("#startBtn");
 
-let time = 10;
+let time = 60;
 remainingTime.innerText = time;
 
 let result = 0;
@@ -109,7 +109,7 @@ replayBtn.addEventListener("click", () => {
   replay.classList.toggle("visible");
   replay.classList.toggle("hidden");
   scoreVal = 0;
-  time = 10;
+  time = 60;
   remainingTime.innerText = time;
   timer.style.color = "black";
   timeLoader.style.display = "block";
