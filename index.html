@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplication Quiz App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <u><h1>Multiplication Speed Test Quiz</h1></u>
+    <div class="starter">
+      <h3>Are you ready?</h3>
+      <button id="startBtn">Yes, start</button>
+    </div>
+    <div class="container hidden">
+      <div class="header">
+        <div class="reset" title="reset High Score to 0"><b>(0)</b></div>
+        <div class="timer" title="remaining time">
+          <img src="time loader.gif" alt="time icon" class="timeLoader" /><span
+            id="remainingTime"
+          ></span>
+          &nbsp;sec remaining
+        </div>
+        <div class="scoreDisplay" title="scorecard">
+          <div class="highscore">
+            <span>High Score:</span>
+            <span id="highScore"></span>
+          </div>
+          <div class="score">
+            <span>Your Score:</span>
+            <span id="score"></span>
+          </div>
+        </div>
+      </div>
+      <h2 id="question">Question will appear here.</h2>
+      <input
+        type="number"
+        id="ansBox"
+        class="ansBox"
+        placeholder="Enter your answer"
+        autofocus
+        autocomplete="off"
+      />
+      <button id="btn" title="Submit answer and attempt new question">
+        Submit
+      </button>
+      <div class="replay hidden">
+        <img src="time up.gif" alt="time up icon" />
+        <div>Time's Up!</div>
+        <span id="replayBtn" title="restart game">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="black"
+            class="replayBtn"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
