@@ -7,7 +7,7 @@ body {
   align-items: center;
   text-align: center;
   background-color: lightyellow;
-  font-family: cursive;
+  font-family: sans-serif;
 }
 #startBtn {
   width: 100px;
@@ -66,7 +66,7 @@ body {
   box-sizing: border-box;
   color: green;
   text-align: center;
-  font-family: cursive;
+  font-family: sans-serif;
   font-size: 1.3em;
   border: 2px solid green;
   padding: 3px;
