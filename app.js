@@ -62,6 +62,11 @@ input.addEventListener("keyup", (event) => {
 reset.addEventListener("click", () => {
   highScore.innerText = 0;
   updateLocalStorage(0);
+  scoreVal = 0;
+  time = 60;
+  score.innerText = scoreVal;
+  remainingTime.innerText = time;
+  updateQuestion();
 });
 
 function play() {
@@ -73,7 +78,7 @@ function play() {
     }
     if (time == 0) {
       timeLoader.style.display = "none";
-      if (scoreVal > parseInt(localStorage.getItem("highScore"))) {
+      if (scoreVal > JSON.parse(localStorage.getItem("highScore"))) {
         highScore.innerText = scoreVal;
         updateLocalStorage(scoreVal);
       }
@@ -92,11 +97,11 @@ startBtn.addEventListener("click", () => {
   container.classList.toggle("hidden");
   container.classList.toggle("visibleContainer");
   starter.style.display = "none";
-  if (!parseInt(localStorage.getItem("highScore"))) {
+  if (!JSON.parse(localStorage.getItem("highScore"))) {
     updateLocalStorage(0);
     highScore.innerText = 0;
   } else {
-    highScore.innerText = parseInt(localStorage.getItem("highScore"));
+    highScore.innerText = JSON.parse(localStorage.getItem("highScore"));
   }
   updateQuestion();
   play();
